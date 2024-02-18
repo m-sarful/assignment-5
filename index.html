@@ -321,57 +321,28 @@
 
               </div>
 
-
-
-
-
-
-
-              <!-- <table>
-                <tr>
-                  <th>Seat <span><button id="seat-booking" class="btn bg-[#1DD100] text-white w-8 h-4">0</button></span></th>
-                  <th>Class</th>
-                  <th>Price</th>
-                </tr>
-
-                <tr>
-                  <td id="seat"></td>
-                  <td id="class"></td>
-                  <td id="price"></td>
-                </tr>
-
-               <div id="table">
-
-               </div>
-              
-               
-                <tr class="border-t-2">
-                  <td class="font-bold">Total Price</td>
-                   <td></td>
-                   <td id="totla-price" class="font-bold">1000</td>
-                </tr>
-              </table> -->
+            
               <div class="mt-8 flex gap-2">
-                <input type="text" placeholder="Have any Coupon" class="input input-bordered w-screen max-w-xs" />
-                <button disabled class="btn bg-[#1DD100] text-white">Apply</button>
+                <input id="coupon" type="text" placeholder="Have any Coupon" class="input input-bordered w-screen max-w-xs" />
+                <button id="coupon-btn" onclick="disabled()" disabled class="btn bg-[#1DD100] text-white">Apply</button>
               </div>
                <div class="flex gap-12 mt-8">
                 <h1 class="text-xl font-bold">Grand Total</h1>
-                <h1 class="text-xl font-bold">800</h1>
+                <h1 id="grand-total" class="text-xl font-bold">800</h1>
                 
                </div>
 
                <!-- passengers details  -->
                 <div class="mt-8">
                   <h1 class="text-2xl font-bold mt-4">Passengers Name*</h1>
-                  <input type="text" placeholder="Your Name" class="input input-bordered w-full max-w-xs" />
+                  <input id="name" type="text" placeholder="Your Name" class="input input-bordered w-full max-w-xs" />
                   <h1 class="text-2xl font-bold mt-4">Phone Number*</h1>
-                  <input type="number" placeholder="Your Number" class="input input-bordered w-full max-w-xs" />
+                  <input id="phone-number" type="number" placeholder="Your Number" class="input input-bordered w-full max-w-xs" />
                   <h1 class="text-2xl font-bold mt-4">E-mail</h1>
                   <input type="email" placeholder="Your e-mail" class="input input-bordered w-full max-w-xs" />
                 </div>
                   <div class="mt-4">
-                    <button class="btn btn-wide bg-[#1DD100] text-white">NEXT</button>
+                    <button id="btn-next" disabled class="btn btn-wide bg-[#1DD100] text-white">NEXT</button>
                   </div>
 
                    <div class="mt-4 flex gap-8">
