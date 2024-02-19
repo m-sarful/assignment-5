@@ -20,8 +20,6 @@ for(const btn of seatBtn){
     if(totalSeatBooking > 4){
         btn.classList.remove('bg-[#1DD100]');
         btn.classList.remove('text-white');
-        const couponBtn = document.getElementById('coupon-btn');
-        couponBtn.removeAttribute('disabled');
 
 
         alert('you can booking only 4 seats');
