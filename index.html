@@ -15,6 +15,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- google font Inter  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
      <!-- font awesome link here  -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- style tag here  -->
@@ -22,13 +26,16 @@
   .font-raleway{
     font-family: "Raleway", sans-serif;
   }
+  .font-inter{
+    font-family: "Inter", sans-serif;
+  }
 
   </style>
 </head>
  <!-- body tag here  -->
-<body class="p-4 container mx-auto font-raleway">
+<body class="p-4 container mx-auto ">
      <!-- header section here  -->
-    <header id="header">
+    <header id="header" class="font-raleway">
 
         <!-- navbar  -->
 
@@ -98,23 +105,27 @@
                      <div>
                         <img src="./images/cupon-devider.png" alt="">
                      </div>
-                     <div class="flex items-center">
+                     <div class="flex flex-col items-center justify-center">
                         <h1 class="text-3xl font-extrabold">NEW15</h1>
+                        <br>
+                        <p>Coupon Code</p>
+
                      </div>
                 </div>
                 <div>
-                    <div class="bg-pink-500 flex justify-evenly px-4 lg:px-16">
+                    <div class="bg-pink-500 flex justify-evenly px-2 lg:px-16">
                         <div class="flex flex-col justify-center">
                     <h1 class="text-2xl font-bold">20% OFF</h1>
                      <p class="font-bold">On your next purchase 
-                         <br>
+                        <br>
                          <span class="font-normal">use by January 2024</span></p>
                         </div>
                          <div>
                             <img src="./images/cupon-devider.png" alt="">
                          </div>
-                         <div class="flex items-center">
-                            <h1 class="text-3xl font-extrabold">Couple20</h1>
+                         <div class="flex flex-col items-center justify-center">
+                            <h1 class="text-3xl font-extrabold">Couple 20</h1>
+                            <p>Coupon Code</p>
                          </div>
                     </div>
             </div>
@@ -128,7 +139,7 @@
     <main  class="mt-8">
       <div id="mainsection">
         <!-- sit confirm section  -->
-        <section class="mt-12">
+        <section class="mt-12 font-raleway">
              <div>
 
                  <!-- text introduction  -->
@@ -156,7 +167,7 @@
                     <div class="grid col-start-10 col-end-12">
 
                        
-                    <button class="flex border rounded-md h-14 w-36 text-[#1DD100] bg-gray-300 text-xl font-bold"><img class="" src="./images/seat-green.png" alt="">  <span id="available-seat"> 40 </span> Seats Left</button>
+                    <button class="flex border rounded-md h-14 w-36 text-[#1DD100] bg-gray-300 text-xl font-bold font-inter"><img class="" src="./images/seat-green.png" alt="">  <span id="available-seat"> 40 </span> Seats Left</button>
                     </div>
                    </div>
 
@@ -192,7 +203,7 @@
         </section>
 
         <!-- Ticket booking section  -->
-        <section class="mt-12">
+        <section class="mt-12 font-inter">
           
            <div class="flex flex-col lg:grid grid-cols-12">
           <!-- Ticket  -->
@@ -204,7 +215,7 @@
                  </div>
                  <div class="flex">
                   <img class="h-12 w-12" src="./images/seat-green-filled.png" alt="">
-                   <h3 class="text-[#1DD100]">Selected</h3>
+                   <h3 class="text-[#1DD100] font-bold">Selected</h3>
                  </div>
                  </div>
              
@@ -216,77 +227,77 @@
 
                 <!-- Ticket booking  -->
                 <section>
-                  <h1 class="text-xl font-bold">Select your seat</h1>
+                  <h1 class="text-xl font-bold font-raleway">Select your seat</h1>
                   <div class="flex gap-4 lg:grid grid-cols-12 mt-8">
                      <!-- sit class  -->
-                     <div class="grid gap-2 lg:col-start-1 lg:col-end-2">
-                   <button class="btn">A</button>
-                   <button class="btn">B</button>
-                   <button class="btn">C</button>
-                   <button class="btn">D</button>
-                   <button class="btn">E</button>
-                   <button class="btn">F</button>
-                   <button class="btn">G</button>
-                   <button class="btn">H</button>
-                   <button class="btn">I</button>
-                   <button class="btn">J</button>
+                     <div class="grid gap-2 lg:col-start-1 lg:col-end-2 ">
+                   <button class="btn text-gray-500">A</button>
+                   <button class="btn text-gray-500">B</button>
+                   <button class="btn text-gray-500">C</button>
+                   <button class="btn text-gray-500">D</button>
+                   <button class="btn text-gray-500">E</button>
+                   <button class="btn text-gray-500">F</button>
+                   <button class="btn text-gray-500">G</button>
+                   <button class="btn text-gray-500">H</button>
+                   <button class="btn text-gray-500">I</button>
+                   <button class="btn text-gray-500">J</button>
                       </div>
 
                       <!-- seat number 1  -->
                         <div class="grid gap-2 col-start-3 col-end-4">
-                   <button id="A1" class="btn seat-btn">A1</button>
-                   <button id="B1" class="btn seat-btn">B1</button>
-                   <button id="C1" class="btn seat-btn">C1</button>
-                   <button id="D1" class="btn seat-btn">D1</button>
-                   <button id="E1" class="btn seat-btn">E1</button>
-                   <button id="F1" class="btn seat-btn">F1</button>
-                   <button id="G1" class="btn seat-btn">G1</button>
-                   <button id="H1" class="btn seat-btn">H1</button>
-                   <button id="I1" class="btn seat-btn">I1</button>
-                   <button id="J1" class="btn seat-btn">J1</button>
+                   <button id="A1" class="btn seat-btn text-gray-500">A1</button>
+                   <button id="B1" class="btn seat-btn text-gray-500">B1</button>
+                   <button id="C1" class="btn seat-btn text-gray-500">C1</button>
+                   <button id="D1" class="btn seat-btn text-gray-500">D1</button>
+                   <button id="E1" class="btn seat-btn text-gray-500">E1</button>
+                   <button id="F1" class="btn seat-btn text-gray-500">F1</button>
+                   <button id="G1" class="btn seat-btn text-gray-500">G1</button>
+                   <button id="H1" class="btn seat-btn text-gray-500">H1</button>
+                   <button id="I1" class="btn seat-btn text-gray-500">I1</button>
+                   <button id="J1" class="btn seat-btn text-gray-500">J1</button>
                        </div>
 
                         <!-- seat number 2  -->
                         <div class="grid gap-2 col-start-5 col-end-6">
-                   <button id="A2" class="btn seat-btn">A2</button>
-                   <button id="B2" class="btn seat-btn">B2</button>
-                   <button id="C2" class="btn seat-btn">C2</button>
-                   <button id="D2" class="btn seat-btn">D2</button>
-                   <button id="E2" class="btn seat-btn">E2</button>
-                   <button id="F2" class="btn seat-btn">F2</button>
-                   <button id="G2" class="btn seat-btn">G2</button>
-                   <button id="H2" class="btn seat-btn">H2</button>
-                   <button id="I2" class="btn seat-btn">I2</button>
-                   <button id="J2" class="btn seat-btn">J2</button>
+                   <button id="A2" class="btn seat-btn text-gray-500">A2</button>
+                   <button id="B2" class="btn seat-btn text-gray-500">B2</button>
+                   <button id="C2" class="btn seat-btn text-gray-500">C2</button>
+                   <button id="D2" class="btn seat-btn text-gray-500">D2</button>
+                   <button id="E2" class="btn seat-btn text-gray-500">E2</button>
+                   <button id="F2" class="btn seat-btn text-gray-500">F2</button>
+                   <button id="G2" class="btn seat-btn text-gray-500">G2</button>
+                   <button id="H2" class="btn seat-btn text-gray-500">H2</button>
+                   <button id="I2" class="btn seat-btn text-gray-500">I2</button>
+                   <button id="J2" class="btn seat-btn text-gray-500">J2</button>
                        </div>
 
                           <!-- seat number 3  -->
                           <div class="grid gap-2 col-start-8 col-end-9">
-                            <button id="A3" class="btn seat-btn">A3</button>
-                            <button id="B3" class="btn seat-btn">B3</button>
-                            <button id="C3" class="btn seat-btn">C3</button>
-                            <button id="D3" class="btn seat-btn">D3</button>
-                            <button id="E3" class="btn seat-btn">E3</button>
-                            <button id="F3" class="btn seat-btn">F3</button>
-                            <button id="G3" class="btn seat-btn">G3</button>
-                            <button id="H3" class="btn seat-btn">H3</button>
-                            <button id="I3" class="btn seat-btn">I3</button>
-                            <button id="J3" class="btn seat-btn">J3</button>
+                            <button id="A3" class="btn seat-btn text-gray-500">A3</button>
+                            <button id="B3" class="btn seat-btn text-gray-500">B3</button>
+                            <button id="C3" class="btn seat-btn text-gray-500">C3</button>
+                            <button id="D3" class="btn seat-btn text-gray-500">D3</button>
+                            <button id="E3" class="btn seat-btn text-gray-500">E3</button>
+                            <button id="F3" class="btn seat-btn text-gray-500">F3</button>
+                            <button id="G3" class="btn seat-btn text-gray-500">G3</button>
+                            <button id="H3" class="btn seat-btn text-gray-500">H3</button>
+                            <button id="I3" class="btn seat-btn text-gray-500">I3</button>
+                            <button id="J3" class="btn seat-btn text-gray-500">J3</button>
                          </div>
 
 
                           <!-- seat number 3  -->
                           <div class="grid gap-2 col-start-10 col-end-11">
-                   <button id="A4" class="btn seat-btn">A4</button>
-                   <button id="B4" class="btn seat-btn">B4</button>
-                   <button id="C4" class="btn seat-btn">C4</button>
-                   <button id="D4" class="btn seat-btn">D4</button>
-                   <button id="E4" class="btn seat-btn">E4</button>
-                   <button id="F4" class="btn seat-btn">F4</button>
-                   <button id="G4" class="btn seat-btn">G4</button>
-                   <button id="H4" class="btn seat-btn">H4</button>
-                   <button id="I4" class="btn seat-btn">I4</button>
-                   <button id="J4" class="btn seat-btn">J4</button>
+                   <button id="A4" class="btn seat-btn text-gray-500">A4</button>
+                   <button id="B4" class="btn seat-btn text-gray-500">B4</button>
+                   <button id="C4" class="btn seat-btn text-gray-500">C4</button>
+                   <button id="D4" class="btn seat-btn text-gray-500">D4</button>
+                   <button id="E4" class="btn seat-btn text-gray-500">E4</button>
+                   <button id="F4" class="btn seat-btn text-gray-500">F4</button>
+                   <button id="G4" class="btn seat-btn text-gray-500">G4</button>
+                   <button id="H4" class="btn seat-btn text-gray-500">H4</button>
+                   <button id="I4" class="btn seat-btn text-gray-500">I4</button>
+                   <button id="J4" class="btn seat-btn text-gray-500">J4</button>
                          </div>
 
 
@@ -298,11 +309,12 @@
 
              <!-- customer details  -->
             <section class="grid col-start-7">
-              <!-- table  -->
-             <div class=" ">
+             
+             <div class="lg:pl-12">
+              <h1 class="text-xl font-bold font-raleway">Select your seat</h1>
 
 
-              <div>
+              <div class="mt-12 font-inter">
                 <ul class="flex gap-12 lg:gap-24">
                   <li class="text-xl font-bold">Seat<span id="seat-booking" class="bg-[#1DD100] text-white">0</span></li>
                   <li class="text-xl font-bold">Class</li>
@@ -326,16 +338,16 @@
             
               <div id="coupon-div" class="mt-8 flex gap-2">
                 <input id="coupon" type="text" placeholder="Have any Coupon" class="input input-bordered w-screen max-w-xs" />
-                <button id="coupon-btn" onclick="disabled()" disabled class="btn bg-[#1DD100] text-white">Apply</button>
+                <button id="coupon-btn" class="btn bg-[#1DD100] text-white">Apply</button>
               </div>
                <div class="flex gap-12 mt-8">
                 <h1 class="text-xl font-bold">Grand Total</h1>
-                <h1 id="grand-total" class="text-xl font-bold">800</h1>
+                <h1 id="grand-total" class="text-xl font-bold"></h1>
                 
                </div>
 
-               <!-- passengers details  -->
               
+              <!-- modal  -->
                   <div class="mt-4">
                     <button id="btn-next"  onclick="my_modal_3.showModal()" class="btn btn-wide bg-[#1DD100] text-white">NEXT</button>
                     <section>
@@ -362,14 +374,8 @@
                      </section>
                   </div>
 
-                   
-                
              </div>
  </section>
-
-                    
-
-
 
            </div>
 
@@ -378,13 +384,8 @@
        
    </div>
 
-
-
     </main>
-     <!-- footer section here  -->
-    <footer>
-
-    </footer>
+    
      <!-- Javascript link connection  -->
      <script src="scripts/index.js"></script>
      <script src="scripts/script.js"></script>

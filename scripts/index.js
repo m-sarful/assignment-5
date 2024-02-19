@@ -83,7 +83,7 @@ coupon.addEventListener('keyup', function(event){
          grandPrice.innerText = grandTotal;
       })
    }
-   else if(text === 'Couple20'){
+   else if(text === 'Couple 20'){
     const hideElement = document.getElementById('coupon-btn');
       hideElement.addEventListener('click', function(){
         const hideDiv = document.getElementById('coupon-div');
@@ -107,9 +107,4 @@ coupon.addEventListener('keyup', function(event){
 
 }
 
-// const buyNow = document.getElementById('buy-ticket');
-// const hideElement = document.getElementById('header');
-// buyNow.addEventListener('click', function(){
-//     hideElement.classList.add('hidden');
-//     console.log('display hidden')
-// })
+
