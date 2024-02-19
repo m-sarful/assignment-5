@@ -10,7 +10,8 @@ for(const btn of seatBtn){
    
 
 
-   btn.classList.add('bg-green-500');
+   btn.classList.add('bg-[#1DD100]');
+   btn.classList.add('text-white');
    availableSeat -= 1;
     const available = document.getElementById('available-seat');
     available.innerText = availableSeat;
