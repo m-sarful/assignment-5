@@ -6,7 +6,7 @@ const seatBtn = document.getElementsByClassName('seat-btn');
 
 for(const btn of seatBtn){
 
-   btn.addEventListener('click', function eventHandler(event){
+   btn.addEventListener('click', function eventHandler(){
    
 
 
