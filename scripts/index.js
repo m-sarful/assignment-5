@@ -9,7 +9,7 @@ for(const btn of seatBtn){
    btn.addEventListener('click', function eventHandler(){
    
 
-
+      btn.classList.add('pointer-events-none');
    btn.classList.add('bg-[#1DD100]');
    btn.classList.add('text-white');
    availableSeat -= 1;
