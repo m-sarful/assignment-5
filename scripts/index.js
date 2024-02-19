@@ -6,15 +6,23 @@ const seatBtn = document.getElementsByClassName('seat-btn');
 
 for(const btn of seatBtn){
 
-   btn.addEventListener('click', function eventHandler(){
-   btn.classList.add('bg-green-300');
+   btn.addEventListener('click', function eventHandler(event){
+   
+
+
+   btn.classList.add('bg-green-500');
    availableSeat -= 1;
     const available = document.getElementById('available-seat');
     available.innerText = availableSeat;
     
-    totalSeatBooking += 1;
+    totalSeatBooking++;
     if(totalSeatBooking > 4){
-        btn.removeEventListener('click', eventHandler());
+        btn.classList.remove('bg-green-500');
+        const couponBtn = document.getElementById('coupon-btn');
+        couponBtn.removeAttribute('disabled');
+
+
+        alert('you can booking only 4 seats');
         return;
     }
    
@@ -46,7 +54,8 @@ for(const btn of seatBtn){
     selectedContainer.appendChild(li);
 
     li.classList.add('flex');
-    li.classList.add('gap-28');
+    li.classList.add('gap-24');
+    li.classList.add('flex-wrap');
 
      
 const priceNum = parseInt(price);
@@ -66,20 +75,29 @@ coupon.addEventListener('keyup', function(event){
     const grandPrice = document.getElementById('grand-total');
   
    if(text === 'NEW15'){
-        couponBtn.removeAttribute('disabled');
-    
+     const hideElement = document.getElementById('coupon-btn');
+      hideElement.addEventListener('click', function(){
+        const hideDiv = document.getElementById('coupon-div');
+        hideDiv.classList.add('hidden');
         const grandTotal = totalPrice - (totalPrice*0.15);
          grandPrice.innerText = grandTotal;
+      })
    }
    else if(text === 'Couple20'){
-    couponBtn.removeAttribute('disabled');
-    
-    const grandTotal = totalPrice - (totalPrice*0.20);
-     grandPrice.innerText = grandTotal;
+    const hideElement = document.getElementById('coupon-btn');
+      hideElement.addEventListener('click', function(){
+        const hideDiv = document.getElementById('coupon-div');
+        hideDiv.classList.add('hidden');
+        const grandTotal = totalPrice - (totalPrice*0.20);
+         grandPrice.innerText = grandTotal;
+      })
+
+
    }
    
 });
 
+              
     
 
 
@@ -89,64 +107,9 @@ coupon.addEventListener('keyup', function(event){
 
 }
 
-
-
-document.getElementById('name').addEventListener('keyup', function(event){
-    const nameText = event.target.value;
-    // const name = toString(nameText)
-     const activateButton = document.getElementById('btn-next');
-     if(typeof name === 'string'){
-        activateButton.removeAttribute('disabled');
-     }
-})
-
-
-
-document.getElementById('phone-number').addEventListener('keydown', function(event){
-    const numb = event.target.value;
-    const phnNum = parseInt(numb);
-    console.log(numb)
-     const activatedButton = document.getElementById('btn-next');
-     if(typeof phnNum === 'number'){
-        activatedButton.removeAttribute('disabled', true);
-     }
-     else{
-
-     }
-})
-
-
-
-
-
-
-
-//  document.getElementById('coupon').addEventListener('keyup', function(event){
-//     const text = event.target.value;
-//    const couponBtn = document.getElementById('coupon-btn');
-
-//    if(text === 'NEW15'){
-//     couponBtn.removeAttribute('disabled');
-//     }
-      
-
-  
-//    else if(text === 'Couple20'){
-//     couponBtn.removeAttribute('disabled');
-//    }
-//    else{
-//      couponBtn.setAttribute('disabled', true);
-//    }
-//  });
-
-
-
-
-
-
-
-
-
-function setInnerText(id, value){
-    document.getElementById(id).innerText = value;
-}
+// const buyNow = document.getElementById('buy-ticket');
+// const hideElement = document.getElementById('header');
+// buyNow.addEventListener('click', function(){
+//     hideElement.classList.add('hidden');
+//     console.log('display hidden')
+// })

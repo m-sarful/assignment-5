@@ -28,7 +28,7 @@
  <!-- body tag here  -->
 <body class="p-4 container mx-auto font-raleway">
      <!-- header section here  -->
-    <header>
+    <header id="header">
 
         <!-- navbar  -->
 
@@ -75,7 +75,8 @@
                         <h1 class="mb-5 text-4xl font-bold">End-to-End Travel with <br>
                             <span class="text-[#1DD100]">P Paribahan</span></h1>
                         <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                        <button class="btn btn-primary bg-[#1DD100] text-black">Buy Tickets</button>
+                        <button class="btn btn-primary bg-[#1DD100] text-black"><a href="#mainsection">Buy Tickets</a></button>
+                       
                       </div>
                     </div>
                   </div>
@@ -124,7 +125,8 @@
         </section>
     </header>
      <!-- main section here -->
-    <main class="mt-8">
+    <main  class="mt-8">
+      <div id="mainsection">
         <!-- sit confirm section  -->
         <section class="mt-12">
              <div>
@@ -215,9 +217,9 @@
                 <!-- Ticket booking  -->
                 <section>
                   <h1 class="text-xl font-bold">Select your seat</h1>
-                  <div class="grid grid-cols-12 mt-8">
+                  <div class="flex gap-4 lg:grid grid-cols-12 mt-8">
                      <!-- sit class  -->
-                     <div class="grid gap-2 col-start-1 col-end-2">
+                     <div class="grid gap-2 lg:col-start-1 lg:col-end-2">
                    <button class="btn">A</button>
                    <button class="btn">B</button>
                    <button class="btn">C</button>
@@ -259,7 +261,7 @@
                        </div>
 
                           <!-- seat number 3  -->
-                          <div class="grid gap-2 sm:col-start-1 sm:col-end-2 lg:col-start-8 lg:col-end-9">
+                          <div class="grid gap-2 col-start-8 col-end-9">
                             <button id="A3" class="btn seat-btn">A3</button>
                             <button id="B3" class="btn seat-btn">B3</button>
                             <button id="C3" class="btn seat-btn">C3</button>
@@ -274,7 +276,7 @@
 
 
                           <!-- seat number 3  -->
-                          <div class="grid gap-2 sm:col-start-3 sm:col-end-4 lg:col-start-10 lg:col-end-11">
+                          <div class="grid gap-2 col-start-10 col-end-11">
                    <button id="A4" class="btn seat-btn">A4</button>
                    <button id="B4" class="btn seat-btn">B4</button>
                    <button id="C4" class="btn seat-btn">C4</button>
@@ -301,7 +303,7 @@
 
 
               <div>
-                <ul class="flex gap-24">
+                <ul class="flex gap-12 lg:gap-24">
                   <li class="text-xl font-bold">Seat<span id="seat-booking" class="bg-[#1DD100] text-white">0</span></li>
                   <li class="text-xl font-bold">Class</li>
                   <li class="text-xl font-bold">Price</li>
@@ -312,8 +314,8 @@
 
                   </ul>
                    <hr>
-                   <div class="flex gap-52">
-                        <h1 class="text-2xl font-bold">Total Price</h1>
+                   <div class="flex gap-24 lg:gap-52">
+                        <h1 id="total-price-btn" class="text-2xl font-bold">Total Price</h1>
                          <span id="total-price" class="text-2xl font-bold">0</span>
                    </div>
                
@@ -322,7 +324,7 @@
               </div>
 
             
-              <div class="mt-8 flex gap-2">
+              <div id="coupon-div" class="mt-8 flex gap-2">
                 <input id="coupon" type="text" placeholder="Have any Coupon" class="input input-bordered w-screen max-w-xs" />
                 <button id="coupon-btn" onclick="disabled()" disabled class="btn bg-[#1DD100] text-white">Apply</button>
               </div>
@@ -333,22 +335,34 @@
                </div>
 
                <!-- passengers details  -->
-                <div class="mt-8">
-                  <h1 class="text-2xl font-bold mt-4">Passengers Name*</h1>
-                  <input id="name" type="text" placeholder="Your Name" class="input input-bordered w-full max-w-xs" />
-                  <h1 class="text-2xl font-bold mt-4">Phone Number*</h1>
-                  <input id="phone-number" type="number" placeholder="Your Number" class="input input-bordered w-full max-w-xs" />
-                  <h1 class="text-2xl font-bold mt-4">E-mail</h1>
-                  <input type="email" placeholder="Your e-mail" class="input input-bordered w-full max-w-xs" />
-                </div>
+              
                   <div class="mt-4">
-                    <button id="btn-next" disabled class="btn btn-wide bg-[#1DD100] text-white">NEXT</button>
+                    <button id="btn-next"  onclick="my_modal_3.showModal()" class="btn btn-wide bg-[#1DD100] text-white">NEXT</button>
+                    <section>
+                      <!-- Open the modal using ID.showModal() method -->
+                      <dialog id="my_modal_3" class="modal">
+                        <div class="modal-box">
+                          <form method="dialog">
+                            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                          </form>
+                          <div class="flex justify-center">
+                            <img src="./images/success.png" alt="">
+
+                          </div>
+                          <h3 class="font-bold text-lg text-center">Success</h3>
+                          <p class="py-4 text-center">Thank you for Booking Our Bus Seats. 
+                            We are working hard to find the best service and deals for you. 
+                            Shortly you will find a confirmation in your email.</p>
+                             <div class="flex justify-center">
+                              <button class="btn bg-emerald-500">Continue</button>
+                             </div>
+                            
+                        </div>
+                      </dialog>
+                     </section>
                   </div>
 
-                   <div class="mt-4 flex gap-8">
-                    <a class="underline" href="#">Terms Conditions</a>
-                    <a class="underline" href="#">Cancellation Policy</a>
-                   </div>
+                   
                 
              </div>
  </section>
@@ -360,6 +374,10 @@
            </div>
 
         </section>
+
+       
+   </div>
+
 
 
     </main>
