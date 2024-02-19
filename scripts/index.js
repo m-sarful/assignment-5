@@ -96,7 +96,10 @@ coupon.addEventListener('keyup', function(event){
    
 });
 
-              
+    const modalBtn = document.getElementById('modal-btn');
+    modalBtn.addEventListener('click', function(){
+      window.location.reload();
+    })          
     
 
 
