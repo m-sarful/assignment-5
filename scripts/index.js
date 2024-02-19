@@ -71,7 +71,6 @@ grand.innerText = totalPrice;
  const coupon = document.getElementById('coupon');
 coupon.addEventListener('keyup', function(event){
     const text = event.target.value;
-    const couponBtn = document.getElementById('coupon-btn');
     const grandPrice = document.getElementById('grand-total');
   
    if(text === 'NEW15'){
